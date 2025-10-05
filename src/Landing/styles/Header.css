@@ -1,0 +1,20 @@
+.landing-header{
+    background-color: var(--bgColor) !important;
+   color: var(--navColor) !important;
+}
+.iconMenu-Header {
+    color: var(--navColor) !important;
+    cursor: pointer;
+    position: relative;
+}
+.nav-link{
+    color: var(--navColor) !important;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-header-landing{
+    border-radius: 20px !important;
+    color: #fff !important;
+    padding: 8px 20px !important;
+    font-size: 0.775rem !important;
+}
