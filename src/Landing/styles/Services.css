@@ -1,0 +1,82 @@
+.card-services-landing {
+    width: 260px;
+    background-color: #fff; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 15px 10px;
+    height: 350px;
+}
+
+.card-services-landing:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.img-card-services-landing {
+    background-color: #e5f2ff; 
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-card-services-landing img {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+}
+
+.card-services-landing h4 {
+    text-align: center;
+    margin: 15px 0 5px;
+    font-size: 18px;
+    color: #1a237e;
+}
+
+.card-services-landing p {
+    text-align: center;
+    padding: 0 10px;
+    width: 80%;
+    margin: auto;
+    font-size: 15px;
+    color: #6f7880;
+}
+
+.link-card-services-landing {
+    text-decoration: none;
+    color: #1976d2;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+}
+
+.services-info-landing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.header-services-info-landing {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.header-services-info-landing h3 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #1a237e;
+}
+
+.header-services-info-landing p {
+    font-size: 18px;
+    color: #6f7880;
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+}

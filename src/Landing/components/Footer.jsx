@@ -21,7 +21,6 @@ const LandingFooter = () => {
         backgroundColor: "white",
       }}
     >
-      {/* Logo y derechos */}
       <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
           <img
@@ -44,7 +43,6 @@ const LandingFooter = () => {
         </Typography>
       </Box>
 
-      {/* Compañía */}
       <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
         <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
           Compañía
@@ -60,7 +58,6 @@ const LandingFooter = () => {
         </Link>
       </Box>
 
-      {/* Legal */}
       <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
         <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
           Legal
@@ -73,7 +70,6 @@ const LandingFooter = () => {
         </Link>
       </Box>
 
-      {/* Síguenos */}
       <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
         <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
           Síguenos

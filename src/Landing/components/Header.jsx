@@ -11,12 +11,12 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import "../../Global/styles/Global.css";
 import "../styles/Header.css";
-
+import { Link, useNavigate } from "react-router-dom";
 const pages = ["Inicio", "Servicios", "Doctores", "Contacto"];
 
 const LandingHeader = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
-
+  const navigate = useNavigate();
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -75,7 +75,9 @@ const LandingHeader = () => {
               <Button
                 key={page}
                 className="nav-link"
-                onClick={handleCloseNavMenu}
+                onClick={()=>{
+                  navigate(page === "Inicio" ? "/" : `/${page.toLowerCase()}`);
+                }}
                 sx={{ my: 2, display: "block",color: "var(--navColor)" }}
               >
                 {page}
@@ -83,8 +85,7 @@ const LandingHeader = () => {
             ))}
           </Box>
 
-          {/* ------------------ DERECHA (MÓVIL): ICONO HAMBURGUESA ------------------ */}
-          {/* ml: 'auto' empuja este bloque al extremo derecho cuando el espacio central está oculto */}
+          {/* ------------------ DERECHA ICONO HAMBURGUESA ------------------ */}
           <Box sx={{ display: { xs: "flex", md: "none" }, ml: "auto" }}>
             <IconButton
               size="large"
@@ -114,7 +115,9 @@ const LandingHeader = () => {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={()=>{
+                  navigate(page === "Inicio" ? "/" : `/${page.toLowerCase()}`);
+                }}>
                   <Typography sx={{ textAlign: "center" }}>{page}</Typography>
                 </MenuItem>
               ))}
@@ -125,10 +128,14 @@ const LandingHeader = () => {
           </Box>
 
           {/* ------------------ Parte izq ------------------ */}
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ display: { xs: "none", md: "flex" },gap:0.5 }}>
               <Button 
                 sx={{'backgroundColor': 'var(--btnColor)'}}
-              className="btn-header-landing">Iniciar sesion</Button>
+              className="btn-header-landing">Iniciar sesion</Button> 
+              <Button 
+
+                sx={{'backgroundColor': 'transparent', 'border': '2px solid var(--btnColor)', 'color': 'var(--btnColor)',}}
+              className="btn-header-landing-register">Registrate</Button>
           </Box>
         </Toolbar>
       </Container>
