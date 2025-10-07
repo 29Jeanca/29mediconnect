@@ -51,7 +51,7 @@ const DoctorsInfo = () => {
   const [page, setPage] = useState(1);
   const doctorsPerPage = 4;
 
-  const handleChange = (event, value) => {
+  const handleChange = (value) => {
     setPage(value);
   };
 
