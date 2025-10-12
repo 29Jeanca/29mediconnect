@@ -1,5 +1,7 @@
 import "../styles/Hero.css";
+import { useNavigate } from "react-router-dom";
 const HeroLanding = () => {
+  const navigate = useNavigate();
   return (
     <>
       <section className="hero-landing-section">
@@ -10,7 +12,9 @@ const HeroLanding = () => {
             en linea
           </p>
           <div className="hero-landing-buttons">
-            <button>Iniciar sesion</button>
+            <button 
+            onClick={() => navigate("/login")}
+            >Iniciar sesion</button>
             <button>Registrarme</button>
           </div>
         </div>

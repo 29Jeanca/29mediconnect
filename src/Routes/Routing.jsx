@@ -3,6 +3,8 @@ import LandingPage from "../Landing/pages/Landing";
 import ServicesLandingPage from "../Landing/pages/Services";
 import DoctorsLandingPage from "../Landing/pages/Doctors";
 import ContactLandingPage from "../Landing/pages/Contact";
+import Login from "../Authentication/pages/Login";
+import Registration from "../Authentication/pages/Registration";
 const Routing = () =>{
     return(
         <Router>
@@ -12,6 +14,9 @@ const Routing = () =>{
                 <Route path="/servicios" element={<ServicesLandingPage/>}/>
                 <Route path="/doctores" element={<DoctorsLandingPage/>}/>
                 <Route path="/contacto" element={<ContactLandingPage/>}/>
+                {/* AUTHENTICATION ROUTES */}
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/register" element={<Registration/>}/>
             </Routes>
         </Router>
     )

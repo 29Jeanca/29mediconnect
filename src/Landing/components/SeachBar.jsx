@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-const SearchBar = () => {
+const SearchBar = ({ term, onTermChange, onSearch }) => {
   return (
     <Box
       sx={{
@@ -28,7 +28,6 @@ const SearchBar = () => {
         margin: "0 auto",
       }}
     >
-      {/* 🔍 Barra principal */}
       <Box
         sx={{
           display: "flex",
@@ -48,6 +47,8 @@ const SearchBar = () => {
           variant="outlined"
           size="medium"
           fullWidth
+          value={term}
+          onChange={(e) => onTermChange(e.target.value)}
           sx={{
             backgroundColor: "#f9fafb",
             borderRadius: "8px",
@@ -73,10 +74,10 @@ const SearchBar = () => {
           }}
         />
 
-        {/* 🔵 Botón Buscar */}
         <Button
           variant="contained"
           size="large"
+          onClick={onSearch}
           sx={{
             textTransform: "none",
             backgroundColor: "#007bff",
@@ -89,7 +90,7 @@ const SearchBar = () => {
             display: "flex",
             alignItems: "center",
             gap: 1,
-            flexShrink: 0, // 👈 evita que el botón se reduzca y baje
+            flexShrink: 0,
             "@media (max-width:768px)": {
               width: "100%",
             },
@@ -100,7 +101,6 @@ const SearchBar = () => {
         </Button>
       </Box>
 
-      {/* ⚙️ Filtros debajo */}
       <Box
         sx={{
           display: "flex",

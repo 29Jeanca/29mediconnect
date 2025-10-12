@@ -47,7 +47,7 @@ const LandingFooter = () => {
         <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
           Compañía
         </Typography>
-        <Link href="#" underline="hover" color="text.secondary">
+        <Link href="/contacto" underline="hover" color="text.secondary">
           Contacto
         </Link>
         <Link href="#" underline="hover" color="text.secondary">

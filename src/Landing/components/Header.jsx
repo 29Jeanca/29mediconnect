@@ -127,13 +127,13 @@ const LandingHeader = () => {
             </Menu>
           </Box>
 
-          {/* ------------------ Parte izq ------------------ */}
           <Box sx={{ display: { xs: "none", md: "flex" },gap:0.5 }}>
               <Button 
+                onClick={() => navigate("/login")}
                 sx={{'backgroundColor': 'var(--btnColor)'}}
               className="btn-header-landing">Iniciar sesion</Button> 
               <Button 
-
+              onClick={() => navigate("/register")}
                 sx={{'backgroundColor': 'transparent', 'border': '2px solid var(--btnColor)', 'color': 'var(--btnColor)',}}
               className="btn-header-landing-register">Registrate</Button>
           </Box>
